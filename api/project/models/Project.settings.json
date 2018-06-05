@@ -20,6 +20,11 @@
     "client": {
       "type": "string",
       "required": true
+    },
+    "senior": {
+      "model": "user",
+      "via": "projectAsSenior",
+      "plugin": "users-permissions"
     }
   }
 }

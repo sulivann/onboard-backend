@@ -2,19 +2,19 @@
   "defaultConnection": "default",
   "connections": {
     "default": {
-      "connector": "strapi-mongoose",
+      "connector": "strapi-bookshelf",
       "settings": {
-        "client": "mongo",
-        "uri": "${process.env.DATABASE_URI || ''}",
-        "host": "${process.env.DATABASE_HOST || '127.0.0.1'}",
-        "port": "${process.env.DATABASE_PORT || 27017}",
-        "database": "${process.env.DATABASE_NAME || 'strapi-production'}",
-        "username": "${process.env.DATABASE_USERNAME || ''}",
-        "password": "${process.env.DATABASE_PASSWORD || ''}"
+        "client": "postgres",
+        "uri": "postgres://lonjxtesxvntep:aac01a7d20b8c11451e80c3f3718a8489348ae805a87dc3601b627585df4bd59@ec2-46-137-109-220.eu-west-1.compute.amazonaws.com:5432/df12vnrp4uons2",
+        "host": "ec2-46-137-109-220.eu-west-1.compute.amazonaws.com",
+        "port": 5432,
+        "database": "df12vnrp4uons2",
+        "username": "lonjxtesxvntep",
+        "password": "aac01a7d20b8c11451e80c3f3718a8489348ae805a87dc3601b627585df4bd59"
       },
       "options": {
-        "ssl": "${process.env.DATABASE_SSL || false}",
-        "authenticationDatabase": "${process.env.DATABASE_AUTHENTICATION_DATABASE || ''}"
+        "ssl": "false",
+        "authenticationDatabase": ""
       }
     }
   }
