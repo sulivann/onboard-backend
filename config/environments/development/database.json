@@ -1,0 +1,19 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "strapi-bookshelf",
+      "settings": {
+        "client": "postgres",
+        "host": "127.0.0.1",
+        "port": 5432,
+        "database": "onboard",
+        "username": "sulivan",
+        "password": ""
+      },
+      "options": {
+        "ssl": false
+      }
+    }
+  }
+}
