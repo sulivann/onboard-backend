@@ -17,13 +17,54 @@
       "type": "text",
       "required": true
     },
-    "client": {
+    "categories": {
+      "collection": "category",
+      "via": "projects",
+      "dominant": true
+    },
+    "estimatedDays": {
+      "type": "integer",
+      "required": true
+    },
+    "clientName": {
+      "type": "string",
+      "required": true
+    },
+    "clientLogo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "clientContactName": {
+      "type": "string",
+      "required": true
+    },
+    "clientContactEmail": {
+      "type": "email",
+      "required": true
+    },
+    "clientContactNumber": {
       "type": "string",
       "required": true
     },
     "senior": {
       "model": "user",
-      "via": "projectAsSenior",
+      "via": "projectsAsSenior",
+      "plugin": "users-permissions"
+    },
+    "approved": {
+      "type": "boolean",
+      "required": true
+    },
+    "candidates": {
+      "collection": "user",
+      "via": "projectsAsCandidate",
+      "dominant": true,
+      "plugin": "users-permissions"
+    },
+    "junior": {
+      "model": "user",
+      "via": "projectsAsJunior",
       "plugin": "users-permissions"
     }
   }

@@ -1,0 +1,22 @@
+{
+  "connection": "default",
+  "collectionName": "category",
+  "info": {
+    "name": "category",
+    "description": "Project category list"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "projects": {
+      "collection": "project",
+      "via": "categories"
+    }
+  }
+}
