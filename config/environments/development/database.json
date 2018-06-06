@@ -2,13 +2,13 @@
   "defaultConnection": "default",
   "connections": {
     "default": {
-      "connector": "strapi-bookshelf",
+      "connector": "strapi-mongoose",
       "settings": {
-        "client": "postgres",
-        "host": "127.0.0.1",
-        "port": 5432,
+        "client": "mongo",
+        "host": "localhost",
+        "port": 27017,
         "database": "onboard",
-        "username": "sulivan",
+        "username": "",
         "password": ""
       },
       "options": {

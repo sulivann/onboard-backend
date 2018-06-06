@@ -2,15 +2,15 @@
   "defaultConnection": "default",
   "connections": {
     "default": {
-      "connector": "strapi-bookshelf",
+      "connector": "strapi-mongoose",
       "settings": {
-        "client": "postgres",
-        "uri": "postgres://lonjxtesxvntep:aac01a7d20b8c11451e80c3f3718a8489348ae805a87dc3601b627585df4bd59@ec2-46-137-109-220.eu-west-1.compute.amazonaws.com:5432/df12vnrp4uons2",
-        "host": "ec2-46-137-109-220.eu-west-1.compute.amazonaws.com",
-        "port": 5432,
-        "database": "df12vnrp4uons2",
-        "username": "lonjxtesxvntep",
-        "password": "aac01a7d20b8c11451e80c3f3718a8489348ae805a87dc3601b627585df4bd59"
+        "client": "mongo",
+        "uri": "mongodb://heroku_kk9c63g3:i3dk3b02c967g5lbkromuv024s@ds147180.mlab.com:47180/heroku_kk9c63g3",
+        "host": "ds147180.mlab.com",
+        "port": 47180,
+        "database": "heroku_kk9c63g3",
+        "username": "heroku_kk9c63g3",
+        "password": "i3dk3b02c967g5lbkromuv024s"
       },
       "options": {
         "ssl": "false",

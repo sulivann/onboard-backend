@@ -2,15 +2,15 @@
   "defaultConnection": "default",
   "connections": {
     "default": {
-      "connector": "strapi-bookshelf",
+      "connector": "strapi-mongoose",
       "settings": {
-        "client": "postgres",
-        "uri": "",
-        "host": "127.0.0.1",
-        "port": 5432,
-        "database": "strapi-staging",
-        "username": "",
-        "password": ""
+        "client": "mongo",
+        "uri": "mongodb://heroku_kk9c63g3:i3dk3b02c967g5lbkromuv024s@ds147180.mlab.com:47180/heroku_kk9c63g3",
+        "host": "ds147180.mlab.com",
+        "port": 27017,
+        "database": "heroku_kk9c63g3",
+        "username": "heroku_kk9c63g3",
+        "password": "i3dk3b02c967g5lbkromuv024s"
       },
       "options": {
         "ssl": "false",
