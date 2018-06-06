@@ -1,1 +1,33 @@
-{}
+{
+  "user": {
+    "attributes": {
+      "firstname": {
+        "appearance": ""
+      },
+      "lastname": {
+        "appearance": ""
+      },
+      "description": {
+        "appearance": ""
+      },
+      "phone": {
+        "appearance": ""
+      },
+      "job": {
+        "appearance": ""
+      },
+      "website": {
+        "appearance": ""
+      },
+      "linkedinUrl": {
+        "appearance": ""
+      },
+      "siret": {
+        "appearance": ""
+      },
+      "rib": {
+        "appearance": ""
+      }
+    }
+  }
+}

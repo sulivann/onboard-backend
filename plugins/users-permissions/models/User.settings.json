@@ -50,6 +50,39 @@
     "projectsAsJunior": {
       "model": "project",
       "via": "junior"
+    },
+    "picture": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "job": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "linkedinUrl": {
+      "type": "string"
+    },
+    "siret": {
+      "type": "string"
+    },
+    "rib": {
+      "type": "string"
     }
-  }
+  },
+  "collectionName": "users-permissions_user"
 }
