@@ -53,8 +53,7 @@
       "plugin": "users-permissions"
     },
     "approved": {
-      "type": "boolean",
-      "required": true
+      "type": "boolean"
     },
     "candidates": {
       "collection": "user",
