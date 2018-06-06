@@ -57,14 +57,18 @@
     },
     "candidates": {
       "collection": "user",
-      "dominant": true,
       "via": "projectsAsCandidate",
+      "dominant": true,
       "plugin": "users-permissions"
     },
     "junior": {
       "model": "user",
       "via": "projectsAsJunior",
       "plugin": "users-permissions"
+    },
+    "objectives": {
+      "collection": "objective",
+      "via": "relatedProject"
     }
   }
 }

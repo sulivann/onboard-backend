@@ -1,0 +1,27 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "objective",
+    "description": "Objective list for projects"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "isDone": {
+      "type": "boolean"
+    },
+    "relatedProject": {
+      "model": "project",
+      "via": "objectives"
+    }
+  }
+}
