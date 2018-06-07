@@ -3,7 +3,7 @@
     {
       "method": "GET",
       "path": "/project",
-      "handler": "Project.find",
+      "handler": "Project.findAvailable",
       "config": {
         "policies": []
       }

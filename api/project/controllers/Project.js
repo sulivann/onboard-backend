@@ -33,6 +33,16 @@ module.exports = {
   },
 
   /**
+   * Retrieve available project records.
+   *
+   * @return {Object|Array}
+   */
+
+  findAvailable: async (ctx) => {
+    return strapi.services.project.fetchAvailable(ctx.query);
+  },
+
+  /**
    * Create a/an project record.
    *
    * @return {Object}

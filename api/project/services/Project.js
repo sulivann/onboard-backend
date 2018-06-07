@@ -36,6 +36,27 @@ module.exports = {
   },
 
   /**
+   * Promise to fetch all available projects
+   *
+   * @return {Promise}
+   */
+
+  fetchAvailable: (params) => {
+    // Select field to populate.
+    const populate = Project.associations
+      .filter(ast => ast.autoPopulate !== false)
+      .map(ast => ast.alias)
+      .join(' ');
+
+    return Project
+      .find({
+        senior: { $exists: false },
+        approved: true
+      })
+      .populate(populate);
+  },
+
+  /**
    * Promise to fetch a/an project.
    *
    * @return {Promise}
