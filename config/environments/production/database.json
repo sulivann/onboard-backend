@@ -13,7 +13,7 @@
         "password": "uou6d3bodvcui8u7mrsbcavs8g"
       },
       "options": {
-        "ssl": "false",
+        "ssl": false,
         "authenticationDatabase": ""
       }
     }
