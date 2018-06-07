@@ -3,23 +3,31 @@
     {
       "method": "GET",
       "path": "/project",
-      "handler": "Project.findAvailable",
+      "handler": "Project.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/project/:_id",
+      "path": "/project/id/:_id",
       "handler": "Project.findOne",
       "config": {
         "policies": []
       }
     },
     {
-      "method": "POST",
-      "path": "/project",
-      "handler": "Project.create",
+      "method": "GET",
+      "path": "/project/senior",
+      "handler": "Project.findAvailableForSenior",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/project/junior",
+      "handler": "Project.findAvailableForJunior",
       "config": {
         "policies": []
       }

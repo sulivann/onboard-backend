@@ -36,12 +36,12 @@ module.exports = {
   },
 
   /**
-   * Promise to fetch all available projects
+   * Promise to fetch all available projects for seniors
    *
    * @return {Promise}
    */
 
-  fetchAvailable: (params) => {
+  fetchAvailableForSenior: (params) => {
     // Select field to populate.
     const populate = Project.associations
       .filter(ast => ast.autoPopulate !== false)
@@ -51,6 +51,29 @@ module.exports = {
     return Project
       .find({
         senior: { $exists: false },
+        approved: true
+      })
+      .find()
+      .populate(populate);
+  },
+
+  /**
+   * Promise to fetch all available projects for junior
+   *
+   * @return {Promise}
+   */
+
+  fetchAvailableForJunior: (params) => {
+    // Select field to populate.
+    const populate = Project.associations
+      .filter(ast => ast.autoPopulate !== false)
+      .map(ast => ast.alias)
+      .join(' ');
+
+    return Project
+      .find({
+        senior: { $exists: true },
+        junior: { $exists: false },
         approved: true
       })
       .populate(populate);

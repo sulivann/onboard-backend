@@ -33,13 +33,23 @@ module.exports = {
   },
 
   /**
-   * Retrieve available project records.
+   * Retrieve available senior project records.
    *
    * @return {Object|Array}
    */
 
-  findAvailable: async (ctx) => {
-    return strapi.services.project.fetchAvailable(ctx.query);
+  findAvailableForSenior: async (ctx) => {
+    return strapi.services.project.fetchAvailableForSenior(ctx.query);
+  },
+
+  /**
+   * Retrieve available junior project records.
+   *
+   * @return {Object|Array}
+   */
+
+  findAvailableForJunior: async (ctx) => {
+    return strapi.services.project.fetchAvailableForJunior(ctx.query);
   },
 
   /**
