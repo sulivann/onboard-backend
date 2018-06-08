@@ -243,6 +243,9 @@ module.exports = {
     // First, check if the user is the first one to register as admin.
     const hasAdmin = users.length > 0;
 
+    // Get role in request body
+    const roleAsParam = ctx.request.body.role;
+
     // Check if the user is the first to register
     const role = hasAdmin === false ? root : await strapi.query('role', 'users-permissions').findOne({ type: settings.default_role }, []);
 
@@ -257,7 +260,7 @@ module.exports = {
       params.identifier = params.identifier.toLowerCase();
     }
 
-    params.role = role._id || role.id;
+    params.role = roleAsParam ? roleAsParam : role._id || role.id;
     params.password = await strapi.plugins['users-permissions'].services.user.hashPassword(params);
 
     const user = await strapi.query('user', 'users-permissions').findOne({
