@@ -50,7 +50,7 @@ module.exports = {
 
     return Project
       .find({
-        senior: { $exists: false },
+        senior: null,
         approved: true
       })
       .find()
@@ -73,7 +73,7 @@ module.exports = {
     return Project
       .find({
         senior: { $exists: true },
-        junior: { $exists: false },
+        junior: null,
         approved: true
       })
       .populate(populate);
