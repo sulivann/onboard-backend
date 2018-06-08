@@ -260,7 +260,7 @@ module.exports = {
       params.identifier = params.identifier.toLowerCase();
     }
 
-    params.role = roleAsParam ? roleAsParam : role._id || role.id;
+    params.role = roleAsParam || role._id || role.id;
     params.password = await strapi.plugins['users-permissions'].services.user.hashPassword(params);
 
     const user = await strapi.query('user', 'users-permissions').findOne({
