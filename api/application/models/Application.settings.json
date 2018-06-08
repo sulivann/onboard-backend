@@ -1,0 +1,26 @@
+{
+  "connection": "default",
+  "collectionName": "application",
+  "info": {
+    "name": "application",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Message": {
+      "type": "text",
+      "required": true
+    },
+    "project": {
+      "model": "project",
+      "via": "applications"
+    },
+    "user": {
+      "model": "user",
+      "via": "applications",
+      "plugin": "users-permissions"
+    }
+  }
+}

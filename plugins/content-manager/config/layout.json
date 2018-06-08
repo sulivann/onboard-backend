@@ -1,1 +1,9 @@
-{}
+{
+  "application": {
+    "attributes": {
+      "Message": {
+        "appearance": ""
+      }
+    }
+  }
+}

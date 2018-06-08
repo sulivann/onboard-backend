@@ -278,9 +278,13 @@ module.exports = {
     try {
       const user = await strapi.query('user', 'users-permissions').create(params);
 
+      // Erase role id only with full features role
+      const role = {'role': await strapi.query('role', 'users-permissions').findOne({ _id: user.role }, [])};
+      const fullUser = {...user._doc, ...role};
+
       ctx.send({
         jwt: strapi.plugins['users-permissions'].services.jwt.issue(_.pick(user.toJSON ? user.toJSON() : user, ['_id', 'id'])),
-        user: _.omit(user.toJSON ? user.toJSON() : user, ['password', 'resetPasswordToken'])
+        user: _.omit(fullUser, ['password', 'resetPasswordToken'])
       });
     } catch(err) {
       const adminError = _.includes(err.message, 'username') ? 'Auth.form.error.username.taken' : 'Auth.form.error.email.taken';

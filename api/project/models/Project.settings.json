@@ -55,12 +55,6 @@
     "approved": {
       "type": "boolean"
     },
-    "candidates": {
-      "collection": "user",
-      "via": "projectsAsCandidate",
-      "dominant": true,
-      "plugin": "users-permissions"
-    },
     "junior": {
       "model": "user",
       "via": "projectsAsJunior",
@@ -69,6 +63,14 @@
     "objectives": {
       "collection": "objective",
       "via": "relatedProject"
+    },
+    "applications": {
+      "collection": "application",
+      "via": "project"
+    },
+    "price": {
+      "type": "float",
+      "required": true
     }
   }
 }

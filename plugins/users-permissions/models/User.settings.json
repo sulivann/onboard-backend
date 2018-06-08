@@ -43,10 +43,6 @@
       "collection": "project",
       "via": "senior"
     },
-    "projectsAsCandidate": {
-      "collection": "project",
-      "via": "candidates"
-    },
     "projectsAsJunior": {
       "model": "project",
       "via": "junior"
@@ -82,6 +78,10 @@
     },
     "rib": {
       "type": "string"
+    },
+    "applications": {
+      "collection": "application",
+      "via": "user"
     }
   },
   "collectionName": "users-permissions_user"
