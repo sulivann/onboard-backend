@@ -33,6 +33,50 @@ module.exports = {
   },
 
   /**
+   * Retrieve a category record with projects available for senior
+   *
+   * @return {Object}
+   */
+
+  findAvailableForSenior: async (ctx) => {
+    if (!ctx.params._id.match(/^[0-9a-fA-F]{24}$/)) {
+      return ctx.notFound();
+    }
+
+    const categories = await strapi.services.category.fetch(ctx.params);
+
+    categories.projects.forEach((project, index, object) => {
+      if (project.senior) {
+        object.splice(index, 1);
+      }
+    });
+
+    return categories;
+  },
+
+  /**
+   * Retrieve a category record with projects available for junior
+   *
+   * @return {Object}
+   */
+
+  findAvailableForJunior: async (ctx) => {
+    if (!ctx.params._id.match(/^[0-9a-fA-F]{24}$/)) {
+      return ctx.notFound();
+    }
+
+    const categories = await strapi.services.category.fetch(ctx.params);
+
+    categories.projects.forEach((project, index, object) => {
+      if (!project.senior || project.junior) {
+        object.splice(index, 1);
+      }
+    });
+
+    return categories;
+  },
+
+  /**
    * Create a/an category record.
    *
    * @return {Object}

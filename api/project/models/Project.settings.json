@@ -71,6 +71,9 @@
     "price": {
       "type": "float",
       "required": true
+    },
+    "isDone": {
+      "type": "boolean"
     }
   }
 }

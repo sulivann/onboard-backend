@@ -5,5 +5,12 @@
         "appearance": ""
       }
     }
+  },
+  "project": {
+    "attributes": {
+      "isDone": {
+        "appearance": ""
+      }
+    }
   }
 }
