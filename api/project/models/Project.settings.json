@@ -17,6 +17,10 @@
       "type": "text",
       "required": true
     },
+    "shortDescription": {
+      "type": "text",
+      "required": true
+    },
     "categories": {
       "collection": "category",
       "via": "projects",
