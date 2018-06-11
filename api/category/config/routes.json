@@ -18,7 +18,7 @@
     },
     {
       "method": "GET",
-      "path": "/category/senior/",
+      "path": "/category/senior/:_id",
       "handler": "Category.findAvailableForSenior",
       "config": {
         "policies": []
@@ -26,7 +26,7 @@
     },
     {
       "method": "GET",
-      "path": "/category/junior/",
+      "path": "/category/junior/:_id",
       "handler": "Category.findAvailableForJunior",
       "config": {
         "policies": []
